@@ -6,7 +6,7 @@
       "nama": "Ayam Bakar",
       "harga": 16000,
       "is_ready": true,
-      "gambar": "sate-ayam.jpg"
+      "gambar": "ayam-bakar.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "nama": "Ayam Goreng",
       "harga": 14000,
       "is_ready": true,
-      "gambar": "nasi-goreng-telor.jpg"
+      "gambar": "ayam-goreng.jpg"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "nama": "Nasi Uduk Special",
       "harga": 12000,
       "is_ready": true,
-      "gambar": "nasi-rames.jpg"
+      "gambar": "nasi-uduks.jpg"
     }
   ],
   "products": [
