@@ -16,16 +16,7 @@
 
       <div class="row mb-3">
         <div class="col-md 3 mt-4">
-          <h2>Foods</h2>
-        </div>
-        <div class="col-md 3 mt-4">
-          <h2>Foods</h2>
-        </div>
-        <div class="col-md 3 mt-4">
-          <h2>Foods</h2>
-        </div>
-        <div class="col-md 3 mt-4">
-          <h2>Foods</h2>
+          <CardProduct />
         </div>
       </div>
     </div>
@@ -36,12 +27,13 @@
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
 import HeroView from "@/components/Hero.vue";
-
+import CardProduct from "@/components/CardProduct.vue";
 export default {
   name: "HomeView",
   components: {
     Navbar,
     HeroView,
+    CardProduct,
   },
 };
 </script>
