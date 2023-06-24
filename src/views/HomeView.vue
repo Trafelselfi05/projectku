@@ -16,11 +16,11 @@
 
       <div class="row mb-3">
         <div class="col-md 3 mt-4" v-for="product in products" :key="product.id">
-          <CardProduct />
+          <CardProduct :product="products"/>
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 </template>
 
 <script>
@@ -43,21 +43,16 @@ export default {
     }
   }, 
   methods: {
-    setProduct(data) {
+    setProducts(data) {
       this.products.push=data
     }
   }, 
   mounted() {
   axios
-  .get('http://localhost:3000/best-productsasdas')
-  .then(function (response) {
-    // handle success
-    this.setProduct(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log("Gagal : ",error);
-  })
-}
+  .get('http://localhost:3000/best-products')
+  .then((response) =>this.setProducts(response.data))
+  .catch((error) => console.log(error))
+  
+},
 };
 </script>
