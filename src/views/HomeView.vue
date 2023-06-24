@@ -15,12 +15,12 @@
       </div>
 
       <div class="row mb-3">
-        <div class="col-md 3 mt-4" v-for="product in products" :key="product.id">
-          <CardProduct :product="products"/>
+        <div class="col-md-3 mt-4" v-for="product in products" :key="product.id">
+          <CardProduct :product="product"/>
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -30,29 +30,27 @@ import HeroView from "@/components/Hero.vue";
 import CardProduct from "@/components/CardProduct.vue";
 import axios from "axios";
 export default {
-
   name: "HomeView",
   components: {
     Navbar,
     HeroView,
     CardProduct,
   },
-  data(){
+  data() {
     return {
-      products: []
-    }
-  }, 
+      products: [],
+    };
+  },
   methods: {
     setProducts(data) {
-      this.products.push=data
-    }
-  }, 
+      this.products = data;
+    },
+  },
   mounted() {
-  axios
-  .get('http://localhost:3000/best-products')
-  .then((response) =>this.setProducts(response.data))
-  .catch((error) => console.log(error))
-  
-},
+    axios
+      .get("http://localhost:3000/best-products")
+      .then((response) => this.setProducts(response.data))
+      .catch((error) => console.log(error));
+  },
 };
 </script>
