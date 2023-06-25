@@ -3,7 +3,7 @@
     <!--Dekstop-->
     <div class="d-none d-md-block">
       <div class="row mt-4">
-        <div class="co-md-6">
+        <div class="col-md-6">
           <div class="d-flex h-100">
             <div class="justify-content-center align-self-center">
               <h2>

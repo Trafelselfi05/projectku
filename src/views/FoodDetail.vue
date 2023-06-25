@@ -2,6 +2,7 @@
   <div class="food-detail">
     <Navbar />
     <div class="container">
+        <!--breadcrumbs -->
       <div class="row">
         <div class="col-mt-5">
           <nav aria-label="breadcrumb">
@@ -17,6 +18,17 @@
           </nav>
         </div>
       </div>
+
+
+      <div class="row">
+        <div class="col md-6">
+            <!--<img :src="../assets/images"+>-->
+        </div>
+      </div>
+      <div class="col md-6">
+        <h2>Nama Makanan</h2>
+      </div>
+
     </div>
   </div>
 </template>
