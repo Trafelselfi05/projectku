@@ -29,26 +29,26 @@
     {
       "id": 1,
       "kode": "K-01",
-      "nama": "Sate Ayam",
+      "nama": "Ayam Bakar",
       "harga": 16000,
       "is_ready": true,
-      "gambar": "sate-ayam.jpg"
+      "gambar": "ayam-bakar.jpg"
     },
     {
       "id": 2,
       "kode": "K-02",
-      "nama": "Nasi Goreng Telur",
+      "nama": "Nasi Uduk Special",
       "harga": 14000,
       "is_ready": true,
-      "gambar": "nasi-goreng-telor.jpg"
+      "gambar": "nasi-uduks.jpg"
     },
     {
       "id": 3,
       "kode": "K-03",
-      "nama": "Nasi Rames",
+      "nama": "Ayam Goreng",
       "harga": 12000,
       "is_ready": true,
-      "gambar": "nasi-rames.jpg"
+      "gambar": "ayam-goreng.jpg"
     },
     {
       "id": 4,
@@ -115,7 +115,7 @@
   ],
   "pesanans": [
     {
-      "nama": "Afif",
+      "nama": "Selfi",
       "noMeja": "3",
       "keranjangs": [
         {

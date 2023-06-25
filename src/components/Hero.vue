@@ -11,9 +11,9 @@
                 kamu
               </h2>
               <p>Ayo Buruan Pesan dan Pilih Makanan Favorit Kamu</p>
-              <button class="btn btn-lg btn-success">
-                <b-icon-arrow-right></b-icon-arrow-right>Pesan
-              </button>
+              <router-link to="/foods" class="btn btn-success "
+            ><b-icon-arrow-right></b-icon-arrow-right>Pesan</router-link
+          >
             </div>
           </div>
         </div>
@@ -36,9 +36,9 @@
                 kamu
               </h2>
               <p>Ayo Buruan Pesan dan Pilih Makanan Favorit Kamu</p>
-              <button class="btn btn-lg btn-success">
+              <router-link class="btn btn-lg btn-success" to="/foods">
                 <b-icon-arrow-right></b-icon-arrow-right>Pesan
-              </button>
+              </router-link>
             </div>
           </div>
         </div>
