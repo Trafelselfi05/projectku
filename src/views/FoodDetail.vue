@@ -44,6 +44,7 @@
                 <label for="keterangan">Keterangan</label>
                 <textarea class="form-control" placeholder="Keterangan Seperti : Pedas, Nasi Setengah ..."></textarea>
               </div>
+               <button type="submit" class="btn btn-success"><b-icon-cart></b-icon-cart>Pesan</button>
             </form>
           </div>
         </div>
