@@ -101,95 +101,29 @@
   ],
   "keranjangs": [
     {
-      "jumlah_pemesanan": 0,
-      "keterangan": "",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
       "id": 1
     },
     {
-      "jumlah_pemesanan": "1",
-      "keterangan": "2",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
       "id": 2
     },
     {
-      "jumlah_pemesanan": "1",
-      "keterangan": "2",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
       "id": 3
     },
     {
-      "jumlah_pemesanan": "1",
-      "keterangan": "2",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
       "id": 4
     },
     {
-      "jumlah_pemesanan": "1",
-      "keterangan": "2",
+      "jumlah_pemesanan": "2",
+      "ketrangan": "pedas",
       "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
+        "id": 2,
+        "kode": "K-02",
+        "nama": "Nasi Uduk Special",
+        "harga": 14000,
         "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
+        "gambar": "nasi-uduks.jpg"
       },
       "id": 5
-    },
-    {
-      "jumlah_pemesanan": "1",
-      "keterangan": "2",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
-      "id": 6
-    },
-    {
-      "jumlah_pemesanan": "1",
-      "keterangan": "pedas",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
-      },
-      "id": 7
     }
   ],
   "pesanans": []

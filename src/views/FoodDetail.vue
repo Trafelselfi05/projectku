@@ -72,11 +72,13 @@
         this.product = data;
       },
       pemesanan(){
-        this.pesan.products(this.product);
+        this.pesan.product = this.product;
         axios
-        .post("http://localhost:3000/keranjangs",this.pesan)
-        .then((response) => this.setProducts(response.data))
-        .catch((error) => console.log(error));
+        .post("http://localhost:3000/keranjangs", this.pesan)
+        .then(()=> {
+          console.log("Berhasil");
+        })
+        .catch((err)=> console.log(err))
       }
     },
     mounted() {
