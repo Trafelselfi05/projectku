@@ -22,7 +22,7 @@
         </div>
   
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 mt-3">
             <img
               :src="'../assets/images/' + product.gambar"
               class="img-fluid"
