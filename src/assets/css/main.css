@@ -33,3 +33,6 @@ border-top-left-radius: 15px;
         font-weight: bold;
         color: black;
 }
+.img-fluid{
+    border-radius: 15px;
+}
