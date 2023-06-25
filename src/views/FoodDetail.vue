@@ -35,10 +35,27 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import axios from "axios";
 export default {
   name: "FoodDetail",
   components: {
     Navbar,
+  },
+  data(){
+return {
+    product :{}
+    }
+  },
+  methods: {
+    setProduct(data) {
+        this.products = data
+    }
+  },
+  mounted() {
+    axios
+      .get("http://localhost:3000/products/"+this.$route.params.id)
+      .then((response) => this.setProduct(response.data))
+      .catch((error) => console.log(error));
   },
 };
 </script>
