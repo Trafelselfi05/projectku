@@ -39,10 +39,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                <tr v-for="(keranjang, index) in keranjangs" :key="keranjang.id">
+                  <th>{{ index+1 }}</th>
+                  <td><img :src="'../assets/images/' + keranjang.product.gambar" class="img-fluid" width="250"/></td>
+                  <td><strong>{{ keranjang.product.nama }}</strong></td>
                   <td>@mdo</td>
                 </tr>
               </tbody>
@@ -75,7 +75,7 @@ methods: {
 mounted() {
     axios
       .get("http://localhost:3000/keranjangs")
-      .then((response) => this.setKeranjangs(response.data))
+      .then((response) => this.setKeranjang(response.data))
       .catch((error) => console.log(error));
   },
 };
