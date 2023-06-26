@@ -45,18 +45,6 @@
                   <td>Otto</td>
                   <td>@mdo</td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -67,10 +55,28 @@
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue";
+import axios from "axios";
 export default {
   name: "KeranjangView",
   components: {
     Navbar,
+  },
+  data(){
+    return {
+      keranjangs : []
+
+    }
+  },
+methods: {
+  setKeranjang(data){
+    this.keranjangs = data
+  }
+},
+mounted() {
+    axios
+      .get("http://localhost:3000/keranjangs")
+      .then((response) => this.setKeranjangs(response.data))
+      .catch((error) => console.log(error));
   },
 };
 </script>
