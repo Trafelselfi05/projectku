@@ -49,8 +49,9 @@
                   <td>
                     {{ keranjang.jumlah_pemesanan }}
                   </td>
-                  <td>Rp. {{ keranjang.product.harga }}</td>
-                  <td>Rp. {{ keranjang.product.harga*keranjang.jumlah_pemesanan }}</td>
+                  <td align="right">Rp. {{ keranjang.product.harga }}</td>
+                  <td align="right"><strong>Rp. {{ keranjang.product.harga*keranjang.jumlah_pemesanan }}</strong></td>
+                  <td><b-icon-trash></b-icon-trash></td>
                 </tr>
               </tbody>
             </table>
