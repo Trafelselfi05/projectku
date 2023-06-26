@@ -99,46 +99,6 @@
       "gambar": "lontong-opor-ayam.jpg"
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah_pemesanan": "1",
-      "ketrangan": "pedas",
-      "product": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Uduk Special",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-uduks.jpg"
-      },
-      "id": 1
-    },
-    {
-      "jumlah_pemesanan": "1",
-      "ketrangan": "pedas",
-      "product": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Uduk Special",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-uduks.jpg"
-      },
-      "id": 2
-    },
-    {
-      "jumlah_pemesanan": "1",
-      "ketrangan": "pedas",
-      "product": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Uduk Special",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-uduks.jpg"
-      },
-      "id": 3
-    }
-  ],
+  "keranjangs": [],
   "pesanans": []
 }
