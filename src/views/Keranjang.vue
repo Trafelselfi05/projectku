@@ -46,6 +46,11 @@
                   <td>
                     {{ keranjang.keterangan ? keranjang.keterangan :"-" }}
                   </td>
+                  <td>
+                    {{ keranjang.jumlah_pemesanan }}
+                  </td>
+                  <td>Rp. {{ keranjang.product.harga }}</td>
+                  <td>Rp. {{ keranjang.product.harga*keranjang.jumlah_pemesanan }}</td>
                 </tr>
               </tbody>
             </table>
