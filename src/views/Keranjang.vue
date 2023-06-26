@@ -43,7 +43,9 @@
                   <th>{{ index+1 }}</th>
                   <td><img :src="'../assets/images/' + keranjang.product.gambar" class="img-fluid" width="250"/></td>
                   <td><strong>{{ keranjang.product.nama }}</strong></td>
-                  <td>@mdo</td>
+                  <td>
+                    {{ keranjang.keterangan ? keranjang.keterangan :"-" }}
+                  </td>
                 </tr>
               </tbody>
             </table>
