@@ -51,7 +51,15 @@
                   </td>
                   <td align="right">Rp. {{ keranjang.product.harga }}</td>
                   <td align="right"><strong>Rp. {{ keranjang.product.harga*keranjang.jumlah_pemesanan }}</strong></td>
-                  <td><b-icon-trash></b-icon-trash></td>
+                  <td align="center" class="text-danger"><b-icon-trash></b-icon-trash></td>
+                </tr>
+                <tr>
+                  <td colspan="6" align="right">
+                    <stong>Total Harga :</stong>
+                  </td>
+                  <td align="right">
+                    <strong>Rp. {{ totalHarga }}</strong>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -86,7 +94,15 @@ mounted() {
       .then((response) => this.setKeranjang(response.data))
       .catch((error) => console.log(error));
   },
+  computed: {
+    totalHarga() {
+      return this.keranjangs.reduce(function(total, keranjang) {
+        return total + keranjang.product.harga * keranjang.jumlah_pemesanan;
+      }, 0);
+    }
+  }
 };
+
 </script>
 
 <style>
