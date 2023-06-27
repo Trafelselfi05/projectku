@@ -43,15 +43,15 @@
                   <th>{{ index+1 }}</th>
                   <td><img :src="'../assets/images/' + keranjang.product.gambar" class="img-fluid" width="250"/></td>
                   <td><strong>{{ keranjang.product.nama }}</strong></td>
-                  <td>
-                    {{ keranjang.keterangan ? keranjang.keterangan :"-" }}
+                   <td>
+                    {{ keranjang.ketrangan || "-" }}
                   </td>
                   <td>
                     {{ keranjang.jumlah_pemesanan }}
                   </td>
                   <td align="right">Rp. {{ keranjang.product.harga }}</td>
                   <td align="right"><strong>Rp. {{ keranjang.product.harga*keranjang.jumlah_pemesanan }}</strong></td>
-                  <td align="center" class="text-danger"><b-icon-trash></b-icon-trash></td>
+                  <td align="center" class="text-danger"><b-icon-trash @click="hapusKeranjang(keranjang.id)"></b-icon-trash></td>
                 </tr>
                 <tr>
                   <td colspan="6" align="right">
@@ -86,7 +86,15 @@ export default {
 methods: {
   setKeranjang(data){
     this.keranjangs = data
-  }
+  },
+hapusKeranjang(id){
+  axios
+      .delete("http://localhost:3000/keranjangs/"+id)
+      .then(() => {
+      })
+      .catch((error) => console.log(error));
+
+},
 },
 mounted() {
     axios
