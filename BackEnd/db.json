@@ -99,6 +99,19 @@
       "gambar": "lontong-opor-ayam.jpg"
     }
   ],
-  "keranjangs": [],
+  "keranjangs": [
+    {
+      "jumlah_pemesanan": "2",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Ayam Bakar",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "ayam-bakar.jpg"
+      },
+      "id": 1
+    }
+  ],
   "pesanans": []
 }

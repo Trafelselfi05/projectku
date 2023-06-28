@@ -1,6 +1,6 @@
 <template>
   <div class="keranjang">
-    <Navbar :updateKeranjang="keranjangs"/>
+    <Navbar :updateKeranjang="keranjangs" />
     <div class="container">
       <!--Breadcrumbs-->
       <div class="row">
@@ -91,9 +91,30 @@
 
       <!--Form Check Out-->
       <div class="row justify-content-end">
-        
+        <div class="col-md-4">
+          <form class="mt-4" v-on:submit.prevent>
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="pesan.nama"
+              />
+            </div>
+            <div class="form-group">
+              <label for="noTlp">No Handphone</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="pesan.noTlp"
+              />
+            </div>
+            <button type="submit" class="btn btn-success float-right" @click="checkout">
+              <b-icon-cart></b-icon-cart >Pesan
+            </button>
+          </form>
+        </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -108,6 +129,7 @@ export default {
   data() {
     return {
       keranjangs: [],
+      pesan: {}
     };
   },
   methods: {
@@ -122,6 +144,20 @@ export default {
         .then((response) => this.setKeranjang(response.data))
         .catch((error) => console.log(error));
     },
+    checkout() {
+      if (this.pesan.nama && this.pesan.noTlp) {
+        // Lakukan checkout atau proses pemesanan
+        console.log("Nama:", this.pesan.nama);
+        console.log("No Handphone:", this.pesan.noTlp);
+
+        // Setelah berhasil melakukan checkout, kosongkan data pesan dan keranjangs
+        this.pesan.nama = "";
+        this.pesan.noTlp = "";
+        this.keranjangs = [];
+      } else {
+        console.log("Nama dan No Handphone harus diisi!");
+      }
+    }
   },
   mounted() {
     axios
