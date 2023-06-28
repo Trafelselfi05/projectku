@@ -88,6 +88,12 @@
           </div>
         </div>
       </div>
+
+      <!--Form Check Out-->
+      <div class="row justify-content-end">
+        
+      </div>
+
     </div>
   </div>
 </template>
