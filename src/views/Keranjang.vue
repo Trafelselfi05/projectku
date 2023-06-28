@@ -137,27 +137,39 @@ export default {
       this.keranjangs = data;
     },
     hapusKeranjang(id) {
-      axios.delete("http://localhost:3000/keranjangs/" + id).then(() => {});
-      //update data keranjang
-      axios
-        .get("http://localhost:3000/keranjangs")
-        .then((response) => this.setKeranjang(response.data))
-        .catch((error) => console.log(error));
-    },
+  axios
+    .delete("http://localhost:3000/keranjangs/" + id)
+    .then(() => {
+      // Perbarui data keranjang setelah penghapusan berhasil
+      this.keranjangs = this.keranjangs.filter((keranjang) => keranjang.id !== id);
+    })
+    .catch((error) => console.log(error));
+},
     checkout() {
-      if (this.pesan.nama && this.pesan.noTlp) {
-        // Lakukan checkout atau proses pemesanan
-        console.log("Nama:", this.pesan.nama);
-        console.log("No Handphone:", this.pesan.noTlp);
+  if (this.pesan.nama && this.pesan.noTlp) {
+    // Buat objek pesanan
+    const pesanan = {
+      nama: this.pesan.nama,
+      noTlp: this.pesan.noTlp,
+      keranjangs: this.keranjangs,
+    };
+
+    // Kirim pesanan ke server menggunakan metode POST
+    axios
+      .post("http://localhost:3000/pesanans", pesanan)
+      .then((response) => {
+        console.log("Pesanan berhasil dikirim:", response.data);
 
         // Setelah berhasil melakukan checkout, kosongkan data pesan dan keranjangs
         this.pesan.nama = "";
         this.pesan.noTlp = "";
         this.keranjangs = [];
-      } else {
-        console.log("Nama dan No Handphone harus diisi!");
-      }
-    }
+      })
+      .catch((error) => console.log(error));
+  } else {
+    console.log("Nama dan No Handphone harus diisi!");
+  }
+}
   },
   mounted() {
     axios
