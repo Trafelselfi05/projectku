@@ -106,7 +106,7 @@
               class="btn btn-success float-right"
               @click="checkout"
             >
-              <b-icon-cart></b-icon-cart>Pesan
+              <b-icon-cart></b-icon-cart>CheckOut
             </button>
           </form>
         </div>
@@ -156,6 +156,7 @@ export default {
         axios
           .post("http://localhost:3000/pesanans", pesanan)
           .then((response) => {
+            this.$router.push({ path : "pesanan-sukses"})
             console.log("Pesanan berhasil dikirim:", response.data);
 
             // Setelah berhasil melakukan checkout, kosongkan data pesan
@@ -167,7 +168,7 @@ export default {
               axios
                 .delete("http://localhost:3000/keranjangs/" + keranjang.id)
                 .then(() => {
-                  // Kosongkan keranjang setelah penghapusan berhasil
+            // Kosongkan keranjang setelah penghapusan berhasil
                   this.keranjangs = [];
                 })
                 .catch((error) => console.log(error));

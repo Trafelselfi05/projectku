@@ -1,14 +1,20 @@
 <template>
-  <Navbar />
-
+  <div class="pesanan-sukses">
+    <Navbar />
+    <h2>PesananSukses</h2>
+  </div>
 </template>
 
 <script>
-export default {
+import Navbar from "@/components/Navbar.vue";
 
-}
+export default {
+  name: "PesananSukses",
+  components: {
+    Navbar,
+  },
+};
 </script>
 
 <style>
-
 </style>
