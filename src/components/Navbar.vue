@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="light">
       <div class="container">
-        <b-navbar-brand href="#">KulinerKudus</b-navbar-brand>
+        <b-navbar-brand href="#">Kuliner <Strong>Kudus</Strong></b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

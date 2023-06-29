@@ -156,7 +156,7 @@ export default {
         axios
           .post("http://localhost:3000/pesanans", pesanan)
           .then((response) => {
-            this.$router.push({ path : "pesanan-sukses"})
+            this.$router.push({ name: "PesananSukses" }); // Update this line
             console.log("Pesanan berhasil dikirim:", response.data);
 
             // Setelah berhasil melakukan checkout, kosongkan data pesan
