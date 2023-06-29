@@ -145,7 +145,7 @@ export default {
     })
     .catch((error) => console.log(error));
 },
-    checkout() {
+checkout() {
   if (this.pesan.nama && this.pesan.noTlp) {
     // Buat objek pesanan
     const pesanan = {
@@ -160,16 +160,27 @@ export default {
       .then((response) => {
         console.log("Pesanan berhasil dikirim:", response.data);
 
-        // Setelah berhasil melakukan checkout, kosongkan data pesan dan keranjangs
+        // Setelah berhasil melakukan checkout, kosongkan data pesan
         this.pesan.nama = "";
         this.pesan.noTlp = "";
-        this.keranjangs = [];
+
+        // Hapus semua keranjang setelah checkout
+        this.keranjangs.forEach((keranjang) => {
+          axios
+            .delete("http://localhost:3000/keranjangs/" + keranjang.id)
+            .then(() => {
+              // Kosongkan keranjang setelah penghapusan berhasil
+              this.keranjangs = [];
+            })
+            .catch((error) => console.log(error));
+        });
       })
       .catch((error) => console.log(error));
   } else {
     console.log("Nama dan No Handphone harus diisi!");
   }
 }
+
   },
   mounted() {
     axios

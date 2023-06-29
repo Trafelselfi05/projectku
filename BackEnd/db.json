@@ -101,14 +101,14 @@
   ],
   "keranjangs": [
     {
-      "jumlah_pemesanan": "3",
+      "jumlah_pemesanan": "1",
       "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Ayam Bakar",
-        "harga": 16000,
+        "id": 2,
+        "kode": "K-02",
+        "nama": "Nasi Uduk Special",
+        "harga": 14000,
         "is_ready": true,
-        "gambar": "ayam-bakar.jpg"
+        "gambar": "nasi-uduks.jpg"
       },
       "id": 1
     }
@@ -132,6 +132,56 @@
         }
       ],
       "id": 1
+    },
+    {
+      "nama": "selfi",
+      "noTlp": "043249235",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "2",
+          "product": {
+            "id": 4,
+            "kode": "K-04",
+            "nama": "Mie Ayam Bakso",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "mie-ayam-bakso.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nama": "selfi",
+      "noTlp": "529058092",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "1",
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Uduk Special",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-uduks.jpg"
+          },
+          "id": 3
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Uduk Special",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-uduks.jpg"
+          },
+          "id": 4
+        }
+      ],
+      "id": 3
     }
   ]
 }
