@@ -95,22 +95,18 @@
           <form class="mt-4" v-on:submit.prevent>
             <div class="form-group">
               <label for="nama">Nama</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="pesan.nama"
-              />
+              <input type="text" class="form-control" v-model="pesan.nama" />
             </div>
             <div class="form-group">
               <label for="noTlp">No Handphone</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="pesan.noTlp"
-              />
+              <input type="text" class="form-control" v-model="pesan.noTlp" />
             </div>
-            <button type="submit" class="btn btn-success float-right" @click="checkout">
-              <b-icon-cart></b-icon-cart >Pesan
+            <button
+              type="submit"
+              class="btn btn-success float-right"
+              @click="checkout"
+            >
+              <b-icon-cart></b-icon-cart>Pesan
             </button>
           </form>
         </div>
@@ -129,7 +125,7 @@ export default {
   data() {
     return {
       keranjangs: [],
-      pesan: {}
+      pesan: {},
     };
   },
   methods: {
@@ -137,50 +133,51 @@ export default {
       this.keranjangs = data;
     },
     hapusKeranjang(id) {
-  axios
-    .delete("http://localhost:3000/keranjangs/" + id)
-    .then(() => {
-      // Perbarui data keranjang setelah penghapusan berhasil
-      this.keranjangs = this.keranjangs.filter((keranjang) => keranjang.id !== id);
-    })
-    .catch((error) => console.log(error));
-},
-checkout() {
-  if (this.pesan.nama && this.pesan.noTlp) {
-    // Buat objek pesanan
-    const pesanan = {
-      nama: this.pesan.nama,
-      noTlp: this.pesan.noTlp,
-      keranjangs: this.keranjangs,
-    };
+      axios
+        .delete("http://localhost:3000/keranjangs/" + id)
+        .then(() => {
+          // Perbarui data keranjang setelah penghapusan berhasil
+          this.keranjangs = this.keranjangs.filter(
+            (keranjang) => keranjang.id !== id
+          );
+        })
+        .catch((error) => console.log(error));
+    },
+    checkout() {
+      if (this.pesan.nama && this.pesan.noTlp) {
+        // Buat objek pesanan
+        const pesanan = {
+          nama: this.pesan.nama,
+          noTlp: this.pesan.noTlp,
+          keranjangs: this.keranjangs,
+        };
 
-    // Kirim pesanan ke server menggunakan metode POST
-    axios
-      .post("http://localhost:3000/pesanans", pesanan)
-      .then((response) => {
-        console.log("Pesanan berhasil dikirim:", response.data);
+        // Kirim pesanan ke server menggunakan metode POST
+        axios
+          .post("http://localhost:3000/pesanans", pesanan)
+          .then((response) => {
+            console.log("Pesanan berhasil dikirim:", response.data);
 
-        // Setelah berhasil melakukan checkout, kosongkan data pesan
-        this.pesan.nama = "";
-        this.pesan.noTlp = "";
+            // Setelah berhasil melakukan checkout, kosongkan data pesan
+            this.pesan.nama = "";
+            this.pesan.noTlp = "";
 
-        // Hapus semua keranjang setelah checkout
-        this.keranjangs.forEach((keranjang) => {
-          axios
-            .delete("http://localhost:3000/keranjangs/" + keranjang.id)
-            .then(() => {
-              // Kosongkan keranjang setelah penghapusan berhasil
-              this.keranjangs = [];
-            })
-            .catch((error) => console.log(error));
-        });
-      })
-      .catch((error) => console.log(error));
-  } else {
-    console.log("Nama dan No Handphone harus diisi!");
-  }
-}
-
+            // Hapus semua keranjang setelah checkout
+            this.keranjangs.forEach((keranjang) => {
+              axios
+                .delete("http://localhost:3000/keranjangs/" + keranjang.id)
+                .then(() => {
+                  // Kosongkan keranjang setelah penghapusan berhasil
+                  this.keranjangs = [];
+                })
+                .catch((error) => console.log(error));
+            });
+          })
+          .catch((error) => console.log(error));
+      } else {
+        console.log("Nama dan No Handphone harus diisi!");
+      }
+    },
   },
   mounted() {
     axios
