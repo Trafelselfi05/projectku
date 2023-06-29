@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div style="background-color: #FFF8DC">
     <Navbar />
     <div class="container">
       <div class="row mt-4">
@@ -22,6 +23,7 @@
           <span class="input-group-text" id="basic-addon1"><b-icon-search></b-icon-search></span>
         </div>
       </div>
+    
 
 
       <div class="row mb-4">
@@ -34,6 +36,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

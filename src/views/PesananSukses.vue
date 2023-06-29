@@ -1,5 +1,6 @@
 <template>
   <div class="pesanan-sukses">
+    <div class="pesanan-sukses" style="background-color: #FFF8DC">
     <Navbar />
     <div class="container">
         <div class="row justify-content-center mt-5 md-4">
@@ -10,7 +11,7 @@
           </div>
         </div>
       </div>
-
+</div>
 
   </div>
 </template>

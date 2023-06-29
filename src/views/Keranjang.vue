@@ -1,5 +1,6 @@
 <template>
   <div class="keranjang">
+    <div class="keranjang" style="background-color: #FFF8DC">
     <Navbar :updateKeranjang="keranjangs" />
     <div class="container">
       <!--Breadcrumbs-->
@@ -113,10 +114,12 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue";
 import axios from "axios";
+
 export default {
   name: "KeranjangView",
   components: {
@@ -136,7 +139,6 @@ export default {
       axios
         .delete("http://localhost:3000/keranjangs/" + id)
         .then(() => {
-          // Perbarui data keranjang setelah penghapusan berhasil
           this.keranjangs = this.keranjangs.filter(
             (keranjang) => keranjang.id !== id
           );
@@ -145,34 +147,40 @@ export default {
     },
     checkout() {
       if (this.pesan.nama && this.pesan.noTlp) {
-        // Buat objek pesanan
         const pesanan = {
           nama: this.pesan.nama,
           noTlp: this.pesan.noTlp,
           keranjangs: this.keranjangs,
         };
 
-        // Kirim pesanan ke server menggunakan metode POST
         axios
           .post("http://localhost:3000/pesanans", pesanan)
           .then((response) => {
-            this.$router.push({ name: "PesananSukses" }); // Update this line
-            console.log("Pesanan berhasil dikirim:", response.data);
+            // Get the total harga from computed property
+            const totalHarga = this.totalHarga;
 
-            // Setelah berhasil melakukan checkout, kosongkan data pesan
-            this.pesan.nama = "";
-            this.pesan.noTlp = "";
-
-            // Hapus semua keranjang setelah checkout
-            this.keranjangs.forEach((keranjang) => {
-              axios
-                .delete("http://localhost:3000/keranjangs/" + keranjang.id)
-                .then(() => {
-            // Kosongkan keranjang setelah penghapusan berhasil
-                  this.keranjangs = [];
-                })
-                .catch((error) => console.log(error));
-            });
+            // Update the total harga in the database
+            axios
+              .patch("http://localhost:3000/pesanans/" + response.data.id, {
+                totalHarga: totalHarga,
+              })
+              .then(() => {
+                this.$router.push({ name: "PesananSukses" });
+                console.log("Pesanan berhasil dikirim:", response.data);
+                this.pesan.nama = "";
+                this.pesan.noTlp = "";
+                this.keranjangs.forEach((keranjang) => {
+                  axios
+                    .delete(
+                      "http://localhost:3000/keranjangs/" + keranjang.id
+                    )
+                    .then(() => {
+                      this.keranjangs = [];
+                    })
+                    .catch((error) => console.log(error));
+                });
+              })
+              .catch((error) => console.log(error));
           })
           .catch((error) => console.log(error));
       } else {
@@ -195,6 +203,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 </style>

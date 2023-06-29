@@ -1,4 +1,5 @@
 <template>
+  <div class="food-detail" style="background-color: #FFF8DC">
   <div class="food-detail">
     <Navbar />
     <div class="container">
@@ -62,6 +63,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
   
   <script>
