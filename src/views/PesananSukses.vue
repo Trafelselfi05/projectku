@@ -1,7 +1,17 @@
 <template>
   <div class="pesanan-sukses">
     <Navbar />
-    <h2>PesananSukses</h2>
+    <div class="container">
+        <div class="row justify-content-center mt-5 md-4">
+          <div class="col text-center">
+            <img src="../assets/images/menunggu.png" width="300" />
+            <h2><strong>Sukses !!</strong></h2>
+            <h4>Pesanan Anda Segera Akan Proses<br>Silahkan Ditunggu</h4>
+          </div>
+        </div>
+      </div>
+
+
   </div>
 </template>
 
@@ -17,4 +27,5 @@ export default {
 </script>
 
 <style>
+
 </style>
