@@ -159,6 +159,26 @@
         }
       ],
       "id": 3
+    },
+    {
+      "nama": "selfi",
+      "noTlp": "03439493",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "3",
+          "ketrangan": "pedas",
+          "product": {
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Bakso",
+            "harga": 10000,
+            "is_ready": true,
+            "gambar": "bakso.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 4
     }
   ]
 }
