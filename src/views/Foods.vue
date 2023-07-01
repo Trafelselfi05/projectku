@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div style="background-color: #FFF8DC">
     <Navbar />
     <div class="container">
       <div class="row mt-4">
@@ -36,7 +35,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <div class="home" style="background-color: #FFF8DC">
     <Navbar />
     <div class="container">
       <HeroView />
@@ -21,7 +20,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 

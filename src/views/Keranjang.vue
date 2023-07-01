@@ -1,6 +1,5 @@
 <template>
   <div class="keranjang">
-    <div class="keranjang" style="background-color: #FFF8DC">
     <Navbar :updateKeranjang="keranjangs" />
     <div class="container">
       <!--Breadcrumbs-->
@@ -78,10 +77,31 @@
                 </tr>
                 <tr>
                   <td colspan="6" align="right">
-                    <stong>Total Harga :</stong>
+                    <strong>Total Harga :</strong>
                   </td>
                   <td align="right">
                     <strong>Rp. {{ totalHarga }}</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <form class="mt-4" v-on:submit.prevent>
+                      <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" v-model="pesan.nama" />
+                      </div>
+                      <div class="form-group">
+                        <label for="noTlp">No Handphone</label>
+                        <input type="text" class="form-control" v-model="pesan.noTlp" />
+                      </div>
+                      <button
+                        type="submit"
+                        class="btn btn-success float-right"
+                        @click="checkout"
+                      >
+                        <b-icon-cart></b-icon-cart>CheckOut
+                      </button>
+                    </form>
                   </td>
                 </tr>
               </tbody>
@@ -90,32 +110,10 @@
         </div>
       </div>
 
-      <!--Form Check Out-->
-      <div class="row justify-content-end">
-        <div class="col-md-4">
-          <form class="mt-4" v-on:submit.prevent>
-            <div class="form-group">
-              <label for="nama">Nama</label>
-              <input type="text" class="form-control" v-model="pesan.nama" />
-            </div>
-            <div class="form-group">
-              <label for="noTlp">No Handphone</label>
-              <input type="text" class="form-control" v-model="pesan.noTlp" />
-            </div>
-            <button
-              type="submit"
-              class="btn btn-success float-right"
-              @click="checkout"
-            >
-              <b-icon-cart></b-icon-cart>CheckOut
-            </button>
-          </form>
-        </div>
-      </div>
     </div>
   </div>
-  </div>
 </template>
+
 <script>
 import Navbar from "@/components/Navbar.vue";
 import axios from "axios";
@@ -203,7 +201,6 @@ export default {
   },
 };
 </script>
-
 
 <style>
 </style>
