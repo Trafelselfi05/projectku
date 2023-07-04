@@ -126,7 +126,10 @@ export default {
   data() {
     return {
       keranjangs: [],
-      pesan: {},
+      pesan: {
+        nama: "",
+        noTlp: "",
+      },
     };
   },
   methods: {
@@ -144,47 +147,46 @@ export default {
         .catch((error) => console.log(error));
     },
     checkout() {
-      if (this.pesan.nama && this.pesan.noTlp) {
-        const pesanan = {
-          nama: this.pesan.nama,
-          noTlp: this.pesan.noTlp,
-          keranjangs: this.keranjangs,
-        };
+  if (this.pesan.nama && this.pesan.noTlp) {
+    const pesanan = {
+      nama: this.pesan.nama,
+      noTlp: this.pesan.noTlp,
+      keranjangs: this.keranjangs,
+    };
 
+    axios
+      .post("http://localhost:3000/pesanans", pesanan)
+      .then((response) => {
+        // Get the total harga from computed property
+        const totalHarga = this.totalHarga;
+
+        // Update the total harga in the database
         axios
-          .post("http://localhost:3000/pesanans", pesanan)
-          .then((response) => {
-            // Get the total harga from computed property
-            const totalHarga = this.totalHarga;
-
-            // Update the total harga in the database
-            axios
-              .patch("http://localhost:3000/pesanans/" + response.data.id, {
-                totalHarga: totalHarga,
-              })
-              .then(() => {
-                this.$router.push({ name: "PesananSukses" });
-                console.log("Pesanan berhasil dikirim:", response.data);
-                this.pesan.nama = "";
-                this.pesan.noTlp = "";
-                this.keranjangs.forEach((keranjang) => {
-                  axios
-                    .delete(
-                      "http://localhost:3000/keranjangs/" + keranjang.id
-                    )
-                    .then(() => {
-                      this.keranjangs = [];
-                    })
-                    .catch((error) => console.log(error));
-                });
-              })
-              .catch((error) => console.log(error));
+          .patch("http://localhost:3000/pesanans/" + response.data.id, {
+            totalHarga: totalHarga,
+          })
+          .then(() => {
+            console.log("Pesanan berhasil dikirim:", response.data);
+            this.pesan.nama = "";
+            this.pesan.noTlp = "";
+            this.keranjangs.forEach((keranjang) => {
+              axios
+                .delete("http://localhost:3000/keranjangs/" + keranjang.id)
+                .then(() => {
+                  this.keranjangs = [];
+                })
+                .catch((error) => console.log(error));
+            });
+            this.$router.push({ name: "PesananSukses" }); // Mengarahkan ke halaman "PesananSukses"
           })
           .catch((error) => console.log(error));
-      } else {
-        console.log("Nama dan No Handphone harus diisi!");
-      }
-    },
+      })
+      .catch((error) => console.log(error));
+  } else {
+    console.log("Nama dan No Handphone harus diisi!");
+  }
+},
+
   },
   mounted() {
     axios
@@ -201,6 +203,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 </style>
