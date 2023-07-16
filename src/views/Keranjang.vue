@@ -88,11 +88,19 @@
                     <form class="mt-4" v-on:submit.prevent>
                       <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" v-model="pesan.nama" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="pesan.nama"
+                        />
                       </div>
                       <div class="form-group">
                         <label for="noTlp">No Handphone</label>
-                        <input type="text" class="form-control" v-model="pesan.noTlp" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="pesan.noTlp"
+                        />
                       </div>
                       <button
                         type="submit"
@@ -109,7 +117,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -147,46 +154,45 @@ export default {
         .catch((error) => console.log(error));
     },
     checkout() {
-  if (this.pesan.nama && this.pesan.noTlp) {
-    const pesanan = {
-      nama: this.pesan.nama,
-      noTlp: this.pesan.noTlp,
-      keranjangs: this.keranjangs,
-    };
+      if (this.pesan.nama && this.pesan.noTlp) {
+        const pesanan = {
+          nama: this.pesan.nama,
+          noTlp: this.pesan.noTlp,
+          keranjangs: this.keranjangs,
+        };
 
-    axios
-      .post("http://localhost:3000/pesanans", pesanan)
-      .then((response) => {
-        // Get the total harga from computed property
-        const totalHarga = this.totalHarga;
-
-        // Update the total harga in the database
         axios
-          .patch("http://localhost:3000/pesanans/" + response.data.id, {
-            totalHarga: totalHarga,
-          })
-          .then(() => {
-            console.log("Pesanan berhasil dikirim:", response.data);
-            this.pesan.nama = "";
-            this.pesan.noTlp = "";
-            this.keranjangs.forEach((keranjang) => {
-              axios
-                .delete("http://localhost:3000/keranjangs/" + keranjang.id)
-                .then(() => {
-                  this.keranjangs = [];
-                })
-                .catch((error) => console.log(error));
-            });
-            this.$router.push({ name: "PesananSukses" }); // Mengarahkan ke halaman "PesananSukses"
+          .post("http://localhost:3000/pesanans", pesanan)
+          .then((response) => {
+            // Get the total harga from computed property
+            const totalHarga = this.totalHarga;
+
+            // Update the total harga in the database
+            axios
+              .patch("http://localhost:3000/pesanans/" + response.data.id, {
+                totalHarga: totalHarga,
+              })
+              .then(() => {
+                console.log("Pesanan berhasil dikirim:", response.data);
+                this.pesan.nama = "";
+                this.pesan.noTlp = "";
+                this.keranjangs.forEach((keranjang) => {
+                  axios
+                    .delete("http://localhost:3000/keranjangs/" + keranjang.id)
+                    .then(() => {
+                      this.keranjangs = [];
+                    })
+                    .catch((error) => console.log(error));
+                });
+                this.$router.push({ name: "PesananSukses" }); // Mengarahkan ke halaman "PesananSukses"
+              })
+              .catch((error) => console.log(error));
           })
           .catch((error) => console.log(error));
-      })
-      .catch((error) => console.log(error));
-  } else {
-    console.log("Nama dan No Handphone harus diisi!");
-  }
-},
-
+      } else {
+        console.log("Nama dan No Handphone harus diisi!");
+      }
+    },
   },
   mounted() {
     axios

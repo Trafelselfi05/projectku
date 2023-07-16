@@ -102,8 +102,49 @@
   "keranjangs": [],
   "pesanans": [
     {
+      "nama": "Selfi",
+      "noTlp": "3809258485",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "2",
+          "ketrangan": "pedas",
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Uduk Special",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-uduks.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 1,
+      "totalHarga": 28000
+    },
+    {
+      "nama": "Selfi",
+      "noTlp": "23245",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "3",
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Ayam Bakar",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "ayam-bakar.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 2,
+      "totalHarga": 48000
+    },
+    {
       "nama": "selfi",
-      "noTlp": "085643903451",
+      "noTlp": "8357492803",
       "keranjangs": [
         {
           "jumlah_pemesanan": "2",
@@ -118,68 +159,29 @@
           "id": 1
         }
       ],
-      "id": 1,
+      "id": 3,
       "totalHarga": 20000
     },
     {
       "nama": "Selfi",
-      "noTlp": "09684956894",
-      "keranjangs": [
-        {
-          "jumlah_pemesanan": "2",
-          "product": {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Nasi Uduk Special",
-            "harga": 14000,
-            "is_ready": true,
-            "gambar": "nasi-uduks.jpg"
-          },
-          "id": 1
-        }
-      ],
-      "id": 2,
-      "totalHarga": 28000
-    },
-    {
-      "nama": "selfi",
-      "noTlp": "4527543209",
-      "keranjangs": [
-        {
-          "jumlah_pemesanan": "2",
-          "product": {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Nasi Uduk Special",
-            "harga": 14000,
-            "is_ready": true,
-            "gambar": "nasi-uduks.jpg"
-          },
-          "id": 1
-        }
-      ],
-      "id": 3,
-      "totalHarga": 28000
-    },
-    {
-      "nama": "selfi",
-      "noTlp": "0965087905",
+      "noTlp": "0834885348",
       "keranjangs": [
         {
           "jumlah_pemesanan": "1",
+          "ketrangan": "pedas",
           "product": {
-            "id": 3,
-            "kode": "K-03",
-            "nama": "Ayam Goreng",
-            "harga": 12000,
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Ayam Bakar",
+            "harga": 16000,
             "is_ready": true,
-            "gambar": "ayam-goreng.jpg"
+            "gambar": "ayam-bakar.jpg"
           },
           "id": 1
         }
       ],
       "id": 4,
-      "totalHarga": 12000
+      "totalHarga": 16000
     }
   ]
 }
