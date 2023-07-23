@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home" >
     <Navbar />
-    <div class="container">
+    <div class="container" >
       <HeroView />
       <div class="row mt-4">
         <div class="col">

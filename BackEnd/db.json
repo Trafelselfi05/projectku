@@ -3,84 +3,84 @@
     {
       "id": 1,
       "kode": "K-01",
-      "nama": "Ayam Bakar",
-      "harga": 16000,
+      "nama": "Mini Bento Karakter Nasi Putih",
+      "harga": 8000,
       "is_ready": true,
-      "gambar": "ayam-bakar.jpg"
+      "gambar": "bento-mini-putih.jpg"
     },
     {
       "id": 2,
       "kode": "K-02",
-      "nama": "Ayam Goreng",
-      "harga": 14000,
+      "nama": "Nasi Tumpeng Kuning",
+      "harga": 200000,
       "is_ready": true,
-      "gambar": "ayam-goreng.jpg"
+      "gambar": "tumpeng-kuning.jpg"
     },
     {
       "id": 3,
       "kode": "K-03",
-      "nama": "Nasi Uduk Special",
-      "harga": 12000,
+      "nama": "Gado-Gado",
+      "harga": 15000,
       "is_ready": true,
-      "gambar": "nasi-uduks.jpg"
+      "gambar": "Gado-Gado.jpg"
     }
   ],
   "products": [
     {
       "id": 1,
       "kode": "K-01",
-      "nama": "Ayam Bakar",
-      "harga": 16000,
+      "nama": "Bento Karakter Nasi Putih Small",
+      "harga": 8000,
       "is_ready": true,
-      "gambar": "ayam-bakar.jpg"
+      "gambar": "bento-mini-putih.jpg"
     },
     {
       "id": 2,
       "kode": "K-02",
-      "nama": "Nasi Uduk Special",
-      "harga": 14000,
+      "nama": "Bento Karakter Nasi Kuning Small",
+      "harga": 8000,
       "is_ready": true,
-      "gambar": "nasi-uduks.jpg"
+      "gambar": "mini-bento.jpg"
     },
     {
       "id": 3,
       "kode": "K-03",
-      "nama": "Ayam Goreng",
-      "harga": 12000,
+      "nama": "Bento Karakter Nasi Putih Big",
+      "harga": 14000,
       "is_ready": true,
-      "gambar": "ayam-goreng.jpg"
+      "gambar": "bento-mini-putih.jpg"
     },
     {
       "id": 4,
       "kode": "K-04",
-      "nama": "Mie Ayam Bakso",
+      "nama": "Bento Karakter Nasi Kuning Big",
       "harga": 14000,
       "is_ready": true,
-      "gambar": "mie-ayam-bakso.jpg"
+      "gambar": "mini-bento.jpg"
     },
     {
       "id": 5,
       "kode": "K-05",
-      "nama": "Mie Goreng",
-      "harga": 13000,
+      "nama": "Nasi Tumpeng Kuning",
+      "harga": 200000,
       "is_ready": true,
-      "gambar": "mie-goreng.jpg"
+      "gambar": "tumpeng-kuning.jpg"
     },
     {
       "id": 6,
       "kode": "K-06",
-      "nama": "Bakso",
-      "harga": 10000,
+      "nama": "Nasi Tumpeng Putih",
+      "harga": 170000,
       "is_ready": true,
-      "gambar": "bakso.jpg"
+      "gambar": "tumpeng-putih.jpg"
     },
     {
       "id": 7,
       "kode": "K-07",
-      "nama": "Pangsit 6 pcs",
-      "harga": 5000,
+      "nama": "Gado-Gado",
+      "harga": 15000,
       "is_ready": true,
-      "gambar": "pangsit.jpg"
+      "gambar": "Gado-gado.jpg"
     },
     {
       "id": 8,
@@ -93,41 +93,90 @@
     {
       "id": 9,
       "kode": "K-09",
-      "nama": "Lontong Opor Ayam",
-      "harga": 18000,
+      "nama": "Opor Ayam Satu Porsi",
+      "harga": 20000,
       "is_ready": true,
-      "gambar": "lontong-opor-ayam.jpg"
+      "gambar": "opor ayam.jpg"
+    },
+    {
+      "id": 10,
+      "kode": "K-10",
+      "nama": "Opor Ayam Daging Satu Ekor",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "opor-daging-ekor.jpg"
+    },
+    {
+      "id": 11,
+      "kode": "K-11",
+      "nama": "Opor Ayam Kampung Satu Ekor",
+      "harga": 150000,
+      "is_ready": true,
+      "gambar": "opor-kampung-ekor.jpeg"
+    },
+    {
+      "id": 12,
+      "kode": "K-12",
+      "nama": "Sosis Solo/Pcs",
+      "harga": 1700,
+      "is_ready": true,
+      "gambar": "sosis-solo.jpg"
+    },
+    {
+      "id": 13,
+      "kode": "K-13",
+      "nama": "Dadar Gulung Coklat/Pcs",
+      "harga": 2000,
+      "is_ready": true,
+      "gambar": "dadar-coklat.jpg"
+    },
+    {
+      "id": 14,
+      "kode": "K-14",
+      "nama": "Dadar Gulung Kelapa/Pcs",
+      "harga": 1700,
+      "is_ready": true,
+      "gambar": "dadar-kelapa.jpg"
+    },
+    {
+      "id": 15,
+      "kode": "K-15",
+      "nama": "Nasi Ayam Geprek",
+      "harga": 12000,
+      "is_ready": true,
+      "gambar": "nasi-ayam-geprek.jpg"
     }
   ],
   "keranjangs": [],
   "pesanans": [
     {
       "nama": "Selfi",
-      "noTlp": "3809258485",
+      "noTlp": "49857346",
       "keranjangs": [
         {
           "jumlah_pemesanan": "2",
-          "ketrangan": "pedas",
+          "ketrangan": "tanpa sambal",
           "product": {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Nasi Uduk Special",
-            "harga": 14000,
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Bakso",
+            "harga": 10000,
             "is_ready": true,
-            "gambar": "nasi-uduks.jpg"
+            "gambar": "bakso.jpg"
           },
-          "id": 1
+          "id": 3
         }
       ],
       "id": 1,
-      "totalHarga": 28000
+      "totalHarga": 20000
     },
     {
-      "nama": "Selfi",
-      "noTlp": "23245",
+      "nama": "nia",
+      "noTlp": "942375843853",
       "keranjangs": [
         {
-          "jumlah_pemesanan": "3",
+          "jumlah_pemesanan": "1",
+          "ketrangan": "pedes",
           "product": {
             "id": 1,
             "kode": "K-01",
@@ -140,48 +189,49 @@
         }
       ],
       "id": 2,
-      "totalHarga": 48000
+      "totalHarga": 16000
     },
     {
-      "nama": "selfi",
-      "noTlp": "8357492803",
+      "nama": "markoneng",
+      "noTlp": "00097695",
       "keranjangs": [
         {
-          "jumlah_pemesanan": "2",
+          "jumlah_pemesanan": "10",
+          "ketrangan": "per porsi nasinya tiga",
           "product": {
-            "id": 6,
-            "kode": "K-06",
-            "nama": "Bakso",
-            "harga": 10000,
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Bento Karakter Nasi Kuning Small",
+            "harga": 8000,
             "is_ready": true,
-            "gambar": "bakso.jpg"
+            "gambar": "mini-bento.jpg"
           },
           "id": 1
         }
       ],
       "id": 3,
-      "totalHarga": 20000
+      "totalHarga": 80000
     },
     {
-      "nama": "Selfi",
-      "noTlp": "0834885348",
+      "nama": "hffgh",
+      "noTlp": "374767879765",
       "keranjangs": [
         {
-          "jumlah_pemesanan": "1",
-          "ketrangan": "pedas",
+          "jumlah_pemesanan": "60",
+          "ketrangan": "tanpa kerucutnya",
           "product": {
-            "id": 1,
-            "kode": "K-01",
-            "nama": "Ayam Bakar",
-            "harga": 16000,
+            "id": 5,
+            "kode": "K-05",
+            "nama": "Nasi Tumpeng Kuning",
+            "harga": 200000,
             "is_ready": true,
-            "gambar": "ayam-bakar.jpg"
+            "gambar": "tumpeng-kuning.jpg"
           },
-          "id": 1
+          "id": 2
         }
       ],
       "id": 4,
-      "totalHarga": 16000
+      "totalHarga": 12000000
     }
   ]
 }
