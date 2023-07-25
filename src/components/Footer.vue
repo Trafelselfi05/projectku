@@ -7,13 +7,13 @@
           <a href="https://www.instagram.com/sabilamwd/">
             <img src="../assets/images/instagram.png" width="40" height="40" alt="Instagram" class="social-icon" />
           </a>
-          <a href="https://www.facebook.com/your_facebook_page">
+          <a href="https://www.facebook.com/sabila.naa">
             <img src="../assets/images/facebook.png" width="40" height="40" alt="Facebook" class="social-icon" />
           </a>
-          <a href="https://wa.me/6285741366846">
+          <a href="http://wa.me/+6285741366846">
             <img src="../assets/images/whatsapp.png" width="40" height="40" alt="WhatsApp" class="social-icon" />
           </a>
-          <p>2023 Copyright Selfi</p>
+          <p>Copy Right Selfi</p>
         </div>
       </div>
     </div>
